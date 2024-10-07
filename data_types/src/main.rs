@@ -161,6 +161,6 @@ fn main() {
     
     println!("Access this array {access}");
 
-    // let access2 = f[6];
+    // let access2 = f[5];
     // println!("Access this array {access2}"); 
 }
