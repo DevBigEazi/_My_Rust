@@ -1,7 +1,6 @@
 /*An if expression allows you to branch your code depending on conditions. You provide a
 condition and then state, “If this condition is met, run this block of code. If the
 condition is not met, do not run this block of code.” */
-
 fn main() {
     let number = 10;
 
@@ -42,4 +41,11 @@ fn main() {
     } else {
         println!("number is not divisible by 4, 3, or 2");
     }
+
+    let condition = true;
+
+    let num = if condition {5} else {6};
+    println!("The value of num is {num}");
+
+    // Loop
 }
