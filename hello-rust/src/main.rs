@@ -3,5 +3,5 @@ fn main() {
     println!("{}", _my_name);
 
     //calls Rust macro
-    println!("Hello Rust!")
+    println!("Hello Rust...!");
 }

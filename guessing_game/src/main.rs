@@ -1,46 +1,40 @@
 use rand::Rng;
-use std::cmp::Ordering;
-use std::io;
+use core::num;
+use std::{cmp::Ordering, io};
 
 fn main() {
-    println!("Number guessing game!");
+    println!("Number Guessing Game");
 
-    let secret_number = rand::thread_rng().gen_range(1..=10);
+    let secret_number = rand::thread_rng().gen_range(10..20);
 
-    println!("Pls input your guessing number!!");
+    // println!("The secret number is {}", secret_number);
 
-    // println!("The secret number is {secret_number}");
-
+    // Loop is used here to make sure the program run for ever
     loop {
+        println!("Guess a new number between 10 and 20");
+
         let mut guess = String::new();
 
         io::stdin()
             .read_line(&mut guess)
-            .expect("Failed to read line");
+            .expect("Error: Failed to read the line!");
 
-        // let guess: u32 = guess.trim().parse().expect("Pls type a number!");
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => continue, // the underscore here is a catchall value
         };
 
-        println!("You guess is {}", guess);
+        println!("Your guess is {guess}");
 
-        // Comparing the Guess to the Secret Number
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
+            Ordering::Less => println!("This number is too small"),
+            Ordering::Greater => println!("This number is too big"),
+            // To avoid breaking of the program when a user input a non-number, we use break statement.
+            // This means the prgram will only stop when a user won.
             Ordering::Equal => {
-                println!("You win!");
+                println!("You are a winner!");
                 break;
             }
         }
     }
 }
-
-// fn main() {
-//     let x = 5;
-//     let y = 10;
-
-//     println!("x = {x} and y + 2 = {}", y + 2);
-// }
