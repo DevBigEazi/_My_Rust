@@ -1,5 +1,4 @@
 use rand::Rng;
-use core::num;
 use std::{cmp::Ordering, io};
 
 fn main() {
