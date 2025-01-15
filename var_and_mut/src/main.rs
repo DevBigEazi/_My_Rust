@@ -5,7 +5,7 @@ fn main() {
     x = 6;
     println!("The value of x is: {x}");
 
-    // const variable must be decleared with its type
+    // const variable must be decleared with its type (type annotation)
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
     println!("{THREE_HOURS_IN_SECONDS}");
 

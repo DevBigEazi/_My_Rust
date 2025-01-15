@@ -38,26 +38,26 @@ fn main() {
 
     // addition
     let sum = 5 + 10;
-    println!("{sum}");
+    println!("The sum: {sum}");
 
     // subtraction
     let difference = 95.5 - 4.3;
-    println!("{difference}");
+    println!("The difference: {difference}");
 
     // multiplication
     let product = 4 * 30;
-    println!("{product}");
+    println!("Multiply: {product}");
 
     // division
     let quotient = 56.7 / 32.2;
-    println!("{quotient}");
+    println!("The division(quotient): {quotient}");
 
     let truncated = -95 / 90; // Results in -1
-    println!("{truncated}");
+    println!("The division(truncated): {truncated}");
 
     // remainder
     let remainder = 43 % 5;
-    println!("{remainder}");
+    println!("The remainder: {remainder}");
 
     // The Boolean Type
     /*As in most other programming languages, a Boolean type in Rust has two possible
@@ -158,9 +158,9 @@ fn main() {
     in square brackets, as shown here: */
     let f = [3; 5]; // This is the same as writing let a = [3, 3, 3, 3, 3]; but in a more concise way.
     let access = f[0];
-    
+
     println!("Access this array {access}");
 
     // let access2 = f[5];
-    // println!("Access this array {access2}"); 
+    // println!("Access this array {access2}");
 }
