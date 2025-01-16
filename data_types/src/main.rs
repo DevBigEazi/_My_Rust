@@ -114,6 +114,29 @@ fn main() {
     println!("The value of 2nd turple is {b}");
     println!("The value of 3rd turple is {c}");
 
+    let _tup: (f32, u16, i8) = (2.3, 20, -12);
+    
+    let (_x, _y, _z) = _tup;
+    
+    println!("{_x}, {_y}, {_z}");
+    
+    let _new_tup: (u16, &str, bool) = (45, "Hello", true);
+    
+    let a = _new_tup.0;
+    let b = _new_tup.1;
+    let c = _new_tup.2;
+    println!("{a}, {b}, {c}");
+    
+    
+    let tuple: (char, f32, bool, &str) = ('💙', 1.2234, false, "Check✅");
+    
+    let _character = tuple.0;
+    let _floating_point = tuple.1;
+    let _boolean = tuple.2;
+    let _string = tuple.3;
+    
+    println!("{_character}, {_floating_point}, {_boolean}, {_string}");
+
     // The Array Type
     /* Another way to have a collection of multiple values is with an array. Unlike a
     tuple, every element of an array must have the same type. Unlike arrays in some other
